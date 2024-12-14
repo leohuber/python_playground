@@ -2,40 +2,20 @@
 
 ## Python Environment
 
-Create a virtual environment: It's generally recommended to use a virtual environment for your project dependencies instead of relying on globally installed libraries. This approach helps to avoid conflicts between different projects and ensures that your project has all the necessary dependencies with the correct versions.
+To initialize the Python environment using the `uv` tool, follow these steps:
 
-```bash
-python3 -m venv .venv
-```
+1. **Install `rustc`, `cargo` and `rustup`**: Install the standalone installer from [https://www.rust-lang.org](https://www.rust-lang.org/tools/install)
 
-Activate the virtual environment:
+2. **Install `uv`**: Install the standalone installer from [https://docs.astral.sh](https://docs.astral.sh/uv/getting-started/installation/)
 
-```bash
-source .venv/bin/activate
-```
+3. **Initialize or Syncronize the environment**:
+    ```sh
+    uv sync
+    ```
 
-Upgrade pip: To ensure you have the latest version of pip, run the following command:
+4. **Activate the environment**:
+    ```sh
+    source .venv/bin/activate
+    ```
 
-```bash
-pip install --upgrade pip
-```
-
-Install dependencies: To install all the dependencies listed in the requirements.txt file, run the following command in your terminal. Make sure to activate the environment local_venv first.
-
-```bash
-pip install -r requirements.txt
-```
-
-Upgrade dependencies: If you need to update a specific package, you can edit the requirements.txt file to specify the new version and then run:
-
-```bash
-pip install -r requirements.txt --upgrade
-```
-
-Add dependencies: To add a new dependency to your project, you can use the `pip install` command followed by the package name. After installing the package, you should update the `requirements.txt` file to include the new dependency. You can do this by running:
-
-```bash
-pip freeze > requirements.txt
-```
-
-This command will overwrite the existing `requirements.txt` file with the current list of installed packages and their versions.
+These commands will set up and activate a new Python environment using `uv`.
