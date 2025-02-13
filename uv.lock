@@ -158,6 +158,18 @@ wheels = [
 ]
 
 [[package]]
+name = "ckan"
+version = "2.11.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3e/b2/47ca4d1c20f62970a44b3c3205dba4252ccc79e22ce52b11f6c0385c4cde/ckan-2.11.2.tar.gz", hash = "sha256:fc2cd16f50d74222c5828c49b30a7d04257fb83b5da84c377111e3e7c95abec0", size = 6599563 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/61/90/66baefdb667b57ba8d637a814c043a0042a6678804f4d987598094334081/ckan-2.11.2-py3-none-any.whl", hash = "sha256:f45ba4080709969b30568acab5aea235485e05a10f70eac734e9ba6c5d5202f2", size = 7320330 },
+]
+
+[[package]]
 name = "click"
 version = "8.1.8"
 source = { registry = "https://pypi.org/simple" }
@@ -1053,12 +1065,14 @@ name = "python-playground"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "ckan" },
     { name = "llama-index" },
     { name = "textual-plotext" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "ckan", specifier = ">=2.11.2" },
     { name = "llama-index", specifier = ">=0.12.11" },
     { name = "textual-plotext", specifier = ">=0.2.1" },
 ]
@@ -1162,6 +1176,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/ab/3a/0316b28d0761c6734d6bc14e770d85506c986c85ffb239e688eeaab2c2bc/rich-13.9.4.tar.gz", hash = "sha256:439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098", size = 223149 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/19/71/39c7c0d87f8d4e6c020a393182060eaefeeae6c01dab6a84ec346f2567df/rich-13.9.4-py3-none-any.whl", hash = "sha256:6049d5e6ec054bf2779ab3358186963bac2ea89175919d699e378b99738c2a90", size = 242424 },
+]
+
+[[package]]
+name = "setuptools"
+version = "75.8.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/92/ec/089608b791d210aec4e7f97488e67ab0d33add3efccb83a056cbafe3a2a6/setuptools-75.8.0.tar.gz", hash = "sha256:c5afc8f407c626b8313a86e10311dd3f661c6cd9c09d4bf8c15c0e11f9f2b0e6", size = 1343222 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/69/8a/b9dc7678803429e4a3bc9ba462fa3dd9066824d3c607490235c6a796be5a/setuptools-75.8.0-py3-none-any.whl", hash = "sha256:e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3", size = 1228782 },
 ]
 
 [[package]]
