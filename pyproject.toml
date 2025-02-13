@@ -6,4 +6,5 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "llama-index>=0.12.11",
+    "textual-plotext>=0.2.1"
 ]
