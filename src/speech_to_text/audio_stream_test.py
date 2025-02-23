@@ -1,24 +1,30 @@
 from pedalboard import Pedalboard, Chorus, Compressor, Gain, Reverb, Phaser
 from pedalboard.io import AudioStream, AudioFile
 import threading
-import pyaudio
 import os
+import sounddevice as sd
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
 
-audio = pyaudio.PyAudio()
 print("Available input devices:")
 device_list = []
-for i in range(audio.get_device_count()):
-    device_info = audio.get_device_info_by_index(i)
-    if device_info['maxInputChannels'] > 0:
-        device_list.append(device_info['name'])
-        print(f"Device {len(device_list)-1}: {device_info['name']}")
+devices = sd.query_devices()
+for dev in devices:
+    if dev['max_input_channels'] > 0:
+        device_list.append(dev['name'])
+        print(f"Device {len(device_list)-1}: {dev['name']}")
 
-selected_index = int(input("Select device index: "))
-input_device_name = device_list[selected_index]
-audio.terminate()
+while True:
+    try:
+        selected_index = int(input("Select device index: "))
+        if 0 <= selected_index < len(device_list):
+            input_device_name = device_list[selected_index]
+            break
+        else:
+            print("Invalid index. Please select a valid device index.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
 
 
 # Open up an audio stream:
