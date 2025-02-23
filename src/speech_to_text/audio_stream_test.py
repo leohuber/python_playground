@@ -4,6 +4,8 @@ import threading
 import os
 import sounddevice as sd
 
+mp3_quality = 'V8' # V0 (highest quality) to V9 (lowest quality)
+
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
 
@@ -37,9 +39,11 @@ with AudioStream(
     "w",
     stream.sample_rate,
     stream.num_input_channels,
-    quality='V8'
+    quality=mp3_quality
 ) as audio_file:
+    
     # Set up the pedalboard for processing
+    '''
     stream.plugins = Pedalboard([
         Compressor(threshold_db=-50, ratio=25),
         Gain(gain_db=30),
@@ -47,6 +51,7 @@ with AudioStream(
         Phaser(),
         Reverb(room_size=0.25),
     ])
+    '''
 
     # Use a separate thread to listen for the user pressing enter.
     stop_event = threading.Event()
