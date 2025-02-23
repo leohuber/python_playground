@@ -1,6 +1,7 @@
 import pyaudio
 import wave
 import threading
+import os
  
 audio = pyaudio.PyAudio()
 
@@ -9,20 +10,23 @@ CHANNELS = 1
 RATE = 44100
 CHUNK = 1024
 RECORD_SECONDS = 5
-WAVE_OUTPUT_FILENAME = "file.wav"
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+WAVE_OUTPUT_FILENAME = project_root + "/.tmp/recording.wav"
 
 device_info = audio.get_default_input_device_info()
 
-print("Default input device info:")
-print(device_info)
+print("Default input device name:", device_info.get('name'))
+print("Default input device rate:", device_info.get('defaultSampleRate'))
+print("Default input device max input channels:", device_info.get('maxInputChannels'))
+print("-----------------------------")
+print("")
 
 max_channels = device_info.get('maxInputChannels')
 if max_channels > 1:
     CHANNELS = 2
-    print("Two channels available")
 else:
     CHANNELS = 1
-    print("Only one channel available")
 
 # start Recording
 stream = audio.open(format=FORMAT, channels=CHANNELS,
@@ -30,7 +34,7 @@ stream = audio.open(format=FORMAT, channels=CHANNELS,
                 frames_per_buffer=CHUNK)
 
 def record():
-    print("recording...")
+    print("Starting Recording ...")
     with wave.open(WAVE_OUTPUT_FILENAME, 'wb') as waveFile:
         waveFile.setnchannels(CHANNELS)
         waveFile.setsampwidth(audio.get_sample_size(FORMAT))
