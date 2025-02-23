@@ -27,3 +27,4 @@ The python module pyaudio requires the portaudio is installed:
     ```sh
     brew install portaudio
     ```
+Documentation of pyaudio: [PyAudio Documentation](https://people.csail.mit.edu/hubert/pyaudio/docs/)
