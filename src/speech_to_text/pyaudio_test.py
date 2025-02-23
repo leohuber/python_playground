@@ -11,7 +11,7 @@ RATE = 44100
 CHUNK = 1024
 RECORD_SECONDS = 5
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 WAVE_OUTPUT_FILENAME = project_root + "/.tmp/recording.wav"
 
 device_info = audio.get_default_input_device_info()
