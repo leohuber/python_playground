@@ -1,7 +1,7 @@
 import os
 import tiktoken
 from llama_index.llms.openai import OpenAI
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, SummaryIndex, DocumentSummaryIndex
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.core.callbacks import CallbackManager, TokenCountingHandler
 import time
 
