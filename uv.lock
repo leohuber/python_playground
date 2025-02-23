@@ -1097,6 +1097,34 @@ wheels = [
 ]
 
 [[package]]
+name = "pedalboard"
+version = "0.9.16"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/83/af/b7de13536d1e7e1e5998f3b73e5cd342296e0f8be00acc31318a7e54e4e6/pedalboard-0.9.16-cp312-cp312-macosx_10_14_universal2.whl", hash = "sha256:0f352356fdb8e6246a0577a62ce003781c2a5fa9ba0f6b09cf344e5a51142288", size = 4980631 },
+    { url = "https://files.pythonhosted.org/packages/71/58/e053eab9654c51a652bac846853ee3149c3b8aa083fecf6236d1fe675235/pedalboard-0.9.16-cp312-cp312-macosx_10_14_x86_64.whl", hash = "sha256:4b92ab1c940d27dcd520cd376a61aa99d442edd27b6787ee6193ad7f8bd799e5", size = 2629466 },
+    { url = "https://files.pythonhosted.org/packages/f5/92/bf8b59bc50e1a233958456558ac8809053b19f129e7851db13ad64be7883/pedalboard-0.9.16-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:2b6161453ac8f8f28f67b49eeaf58f41448f61b54a73e151c0a59626ab574d08", size = 2409484 },
+    { url = "https://files.pythonhosted.org/packages/6e/3e/9910129edc8cddcc5c2dea5e3ee39eabeb363f141aac1d938f8783181357/pedalboard-0.9.16-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7e32ad20a3ffc13324cbf17a1c3fae9c08a391edabcfa371d2ad0ed08bedfffb", size = 7601509 },
+    { url = "https://files.pythonhosted.org/packages/39/05/fb3641ceb261146e2cca76d748216fda50578ffb106e51518ad8023a9cf7/pedalboard-0.9.16-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eac5dd6627bbd8c239c916bffbb7c5d9588d99867591d2e43ab6efd79f75ccbc", size = 7866587 },
+    { url = "https://files.pythonhosted.org/packages/30/f8/3009508d7114136b47c47cc142a2463acd7daebe9504f6771ea895d947a9/pedalboard-0.9.16-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:3a523fba1756d1bed0f5e3ae9816d70ffa971457f67adf4efd03cca0310a879a", size = 7034022 },
+    { url = "https://files.pythonhosted.org/packages/2a/8b/a35cee6a33274c135440aec3f0ae0782b9a0019aca0ec13a062cf5cd3c3e/pedalboard-0.9.16-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:dece4acbc8d43f6a0b44c4af48fdeb90c181890babe88c77cfcee726fbb73865", size = 7203279 },
+    { url = "https://files.pythonhosted.org/packages/ea/c6/6b42fac86cdba73669a19a667e995322c6719b61ebdedd7fac32db475d95/pedalboard-0.9.16-cp312-cp312-win32.whl", hash = "sha256:3d2a815c0fd045a252fdfa57baa9bf35e7dff5e1ddcda8bf1a9ae59b53d3e798", size = 2657323 },
+    { url = "https://files.pythonhosted.org/packages/5a/3f/c66f6b5d3729805c32f8a764b5a19da258e3af8a1ba3c41508eeaa9abd00/pedalboard-0.9.16-cp312-cp312-win_amd64.whl", hash = "sha256:6baf122b22403e5bff2477f37e17e457ad7db1621948debf558f8b2cfe64f39e", size = 3106175 },
+    { url = "https://files.pythonhosted.org/packages/6f/3e/fed6202a68c51c26196f5da09385d9eb74b34f0fb72cc3eab80df505a6ce/pedalboard-0.9.16-cp313-cp313-macosx_10_14_x86_64.whl", hash = "sha256:b84fe32ab13b50076e21d1e79bbef7c00f43bb3623c84d7ced1022b0d9ed55ca", size = 2629618 },
+    { url = "https://files.pythonhosted.org/packages/d9/9c/f9c8f5bd63c17523176308028a7a624978a8f7dd9d3c3b33487ba2aa66dd/pedalboard-0.9.16-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:031e6833c5983c3fe0a96bc4ff04790663a9e95a01c402828bd5a4eff4b8b541", size = 2409439 },
+    { url = "https://files.pythonhosted.org/packages/92/95/373d6a2d7018c1fb7f1d8c3ff40ae5c788dc2b51a3a3d32dcd3ce96086a3/pedalboard-0.9.16-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4be376b2727341cac2540e9f0f3b1d0bb2449ceed7f92399bcfabae052ae7a1a", size = 7601509 },
+    { url = "https://files.pythonhosted.org/packages/79/2c/f876c2ae94dffb283ffe9c5b788dcc32430580fd99a5e99cf5ae25ef669d/pedalboard-0.9.16-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0e46117dc1b62af13bdd4a7ac53b6d92b3a001f2c68ce89bacced9bfcaafe295", size = 7866581 },
+    { url = "https://files.pythonhosted.org/packages/fe/11/0996856a87d8ff37f4b2783b1173f0d47b552910c9a3ae914a38d52a2229/pedalboard-0.9.16-cp313-cp313-win_amd64.whl", hash = "sha256:1eea9fb96672014a663fa7309133c6506ebdd28d84249a7708eae18c0cabb35c", size = 3106352 },
+    { url = "https://files.pythonhosted.org/packages/b9/81/ca0059e343f306b276b6dce136095cfae82723da6022989f656449620fcc/pedalboard-0.9.16-cp313-cp313t-macosx_10_14_x86_64.whl", hash = "sha256:8ffadf7de250d4ccc45929f88b49979d9243077b910fb352eb3cc7231f240d8e", size = 2672545 },
+    { url = "https://files.pythonhosted.org/packages/9d/04/85e55fc2ce426790c03aeb49cc91a6d518ac85bca953cd833386dd9a319c/pedalboard-0.9.16-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:a260d2c5bc79f90340e5eef985919da92188dea9b493b4756d622f6e7e151028", size = 2450465 },
+    { url = "https://files.pythonhosted.org/packages/9c/97/e7dd59c5ebd3f60b959330c46a335ba9e4d024d44c48179ace5e88f4ca3c/pedalboard-0.9.16-cp313-cp313t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8abf69fe280c0c834750072692d5ebb3b4ba7ef49d50b369946d4743a723bb49", size = 7638953 },
+    { url = "https://files.pythonhosted.org/packages/a8/c7/37a857a8ea7578e467f26888024c3314867297c54f3a63d58f219ff14ee7/pedalboard-0.9.16-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:03e73da46d6678a8adbd1ebc70bf38e4316918e44514eb9b1d7989bfb43cb30c", size = 7900748 },
+]
+
+[[package]]
 name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1373,6 +1401,7 @@ dependencies = [
     { name = "llama-index" },
     { name = "numpy" },
     { name = "pandas" },
+    { name = "pedalboard" },
     { name = "pyaudio" },
     { name = "python-dotenv" },
     { name = "scipy" },
@@ -1386,6 +1415,7 @@ requires-dist = [
     { name = "llama-index", specifier = ">=0.12.11" },
     { name = "numpy", specifier = ">=2.2.0" },
     { name = "pandas", specifier = ">=2.2.3" },
+    { name = "pedalboard", specifier = ">=0.9.16" },
     { name = "pyaudio", specifier = ">=0.2.14" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "scipy", specifier = ">=1.15.1" },

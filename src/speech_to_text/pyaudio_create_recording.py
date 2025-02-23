@@ -2,6 +2,8 @@ import pyaudio
 import wave
 import threading
 import os
+from pedalboard import Pedalboard
+from pedalboard.io import AudioFile
  
 audio = pyaudio.PyAudio()
 
@@ -64,3 +66,21 @@ key_thread.join()
 stream.stop_stream()
 stream.close()
 audio.terminate()
+
+# Load the recorded WAV file
+with AudioFile(WAVE_OUTPUT_FILENAME) as f:
+    audio = f.read(f.frames)
+    samplerate = f.samplerate
+
+# Create an empty Pedalboard (no effects)
+board = Pedalboard([])
+
+# Process the audio (this doesn't change it, since the board is empty)
+processed_audio = board(audio, samplerate)
+
+# Save the processed audio to an MP3 file
+mp3_output_filename = WAVE_OUTPUT_FILENAME.replace('.wav', '.mp3')
+with AudioFile(mp3_output_filename, 'w', samplerate, processed_audio.shape[0]) as f:
+    f.write(processed_audio)
+
+print(f"MP3 file saved as {mp3_output_filename}")
