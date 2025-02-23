@@ -63,7 +63,9 @@ with AudioStream(
         print("Press enter to stop streaming and writing the file ...")
         while True:
             elapsed = int(time.time() - start_time)
-            print(f"\rRecording ({elapsed}s) ... Press enter to stop streaming and writing the file ...", end='', flush=True)
+            minutes = elapsed // 60
+            seconds = elapsed % 60
+            print(f"\rRecording ({minutes}m {seconds}s) ... Press enter to stop streaming and writing the file ...", end='', flush=True)
             if sys.stdin in select.select([sys.stdin], [], [], 1)[0]:
                 sys.stdin.readline()
                 break
