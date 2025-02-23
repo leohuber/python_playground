@@ -77,6 +77,5 @@ with AudioStream(
     while not stop_event.is_set():
         audio_buffer = stream.read()
         audio_file.write(audio_buffer)
-# AudioStream and AudioFile are now closed and the file "output.wav" has been written.
 
 # The live AudioStream is now closed, and audio has stopped.
