@@ -7,20 +7,18 @@ import os
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
 
-p = pyaudio.PyAudio()
-
+audio = pyaudio.PyAudio()
 print("Available input devices:")
 device_list = []
-for i in range(p.get_device_count()):
-    device_info = p.get_device_info_by_index(i)
+for i in range(audio.get_device_count()):
+    device_info = audio.get_device_info_by_index(i)
     if device_info['maxInputChannels'] > 0:
         device_list.append(device_info['name'])
         print(f"Device {len(device_list)-1}: {device_info['name']}")
 
 selected_index = int(input("Select device index: "))
 input_device_name = device_list[selected_index]
-
-p.terminate()
+audio.terminate()
 
 
 # Open up an audio stream:
@@ -47,7 +45,7 @@ with AudioStream(
     # Use a separate thread to listen for the user pressing enter.
     stop_event = threading.Event()
     def wait_for_input():
-        input("Recording... Press enter to stop streaming and writing the file...")
+        input("Recording ... Press enter to stop streaming and writing the file ...")
         stop_event.set()
     threading.Thread(target=wait_for_input, daemon=True).start()
 
