@@ -7,7 +7,6 @@ load_dotenv()
 
 # Print the environment variable OPENAPI_KEY and exit
 openapi_key = os.getenv("OPENAI_API_KEY")
-print(f"OPENAI_API_KEY: {openapi_key}")
 
 client = OpenAI()
 
