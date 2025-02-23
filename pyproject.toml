@@ -11,5 +11,6 @@ dependencies = [
     "ipykernel>=6.29.5",
     "numpy>=2.2.0",
     "scipy>=1.15.1",
-    "pandas>=2.2.3"
+    "pandas>=2.2.3",
+    "pyaudio>=0.2.14"
 ]
