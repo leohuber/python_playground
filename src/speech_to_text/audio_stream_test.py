@@ -16,7 +16,7 @@ with AudioStream(
     "w",
     stream.sample_rate,
     stream.num_input_channels,
-    quality='V9'
+    quality='V8'
 ) as audio_file:
     # Set up the pedalboard for processing
     stream.plugins = Pedalboard([
