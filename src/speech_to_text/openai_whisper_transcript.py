@@ -1,5 +1,14 @@
 from openai import OpenAI
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Print the environment variable OPENAPI_KEY and exit
+openapi_key = os.getenv("OPENAI_API_KEY")
+print(f"OPENAI_API_KEY: {openapi_key}")
+
 client = OpenAI()
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
