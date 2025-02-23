@@ -12,7 +12,7 @@ print(f"OPENAI_API_KEY: {openapi_key}")
 client = OpenAI()
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
-WAVE_FILENAME = project_root + "/.tmp/recording.mp3"
+WAVE_FILENAME = project_root + "/.tmp/resampled.mp3"
 
 audio_file= open(WAVE_FILENAME, "rb")
 transcription = client.audio.transcriptions.create(
