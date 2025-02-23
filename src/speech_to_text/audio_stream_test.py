@@ -3,8 +3,11 @@ from pedalboard.io import AudioStream, AudioFile
 import threading
 import os
 import sounddevice as sd
+import sys
+import select
+import time
 
-mp3_quality = 'V8' # V0 (highest quality) to V9 (lowest quality)
+mp3_quality = 'V6' # V0 (highest quality) to V9 (lowest quality)
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
@@ -56,7 +59,15 @@ with AudioStream(
     # Use a separate thread to listen for the user pressing enter.
     stop_event = threading.Event()
     def wait_for_input():
-        input("Recording ... Press enter to stop streaming and writing the file ...")
+        start_time = time.time()
+        print("Press enter to stop streaming and writing the file ...")
+        while True:
+            elapsed = int(time.time() - start_time)
+            print(f"\rRecording ({elapsed}s) ... Press enter to stop streaming and writing the file ...", end='', flush=True)
+            if sys.stdin in select.select([sys.stdin], [], [], 1)[0]:
+                sys.stdin.readline()
+                break
+        stop_event.set()
         stop_event.set()
     threading.Thread(target=wait_for_input, daemon=True).start()
 
