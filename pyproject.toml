@@ -14,5 +14,6 @@ dependencies = [
     "pandas>=2.2.3",
     "python-dotenv>=1.0.1",
     "pedalboard>=0.9.16",
-    "sounddevice>=0.5.1"
+    "sounddevice>=0.5.1",
+    "langchain>=0.3.19"
 ]
