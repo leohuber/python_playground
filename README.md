@@ -13,9 +13,9 @@ To initialize the Python environment using the `uv` tool, follow these steps:
     uv sync
     ```
 
-4. **Activate the environment**:
+4. **Run scripts**:
     ```sh
-    source .venv/bin/activate
+    uv run <path_to_script>
     ```
 
 These commands will set up and activate a new Python environment using `uv`.
