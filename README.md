@@ -19,12 +19,3 @@ To initialize the Python environment using the `uv` tool, follow these steps:
     ```
 
 These commands will set up and activate a new Python environment using `uv`.
-
-## Portaudio
-
-The python module pyaudio requires the portaudio is installed:
-
-    ```sh
-    brew install portaudio
-    ```
-Documentation of pyaudio: [PyAudio Documentation](https://people.csail.mit.edu/hubert/pyaudio/docs/)
