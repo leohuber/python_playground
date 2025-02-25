@@ -4,27 +4,22 @@ import ckanapi
 class Config:
     def __init__(self, base_url: str):
         self._base_url = base_url
+        self._client = ckanapi.RemoteCKAN(base_url)
 
     @property
     def base_url(self):
         return self._base_url
+    
+    @property
+    def client(self):
+        return self._client
 
-def main():
-    # Base URL for opendata.swiss
-    base_url:str = 'https://ckan.opendata.swiss'
-    
-    #ckanapi.RemoteCKAN.base_url = 'api/3/action/'
-    client = ckanapi.RemoteCKAN(base_url)
-    
+def get_organisations(config: Config, search_string:str) -> list[str]:
     try:
-        # Call the package_list action to get a list of all package IDs.
-        package_ids = client.action.package_list()
-        print(f"Total packages found: {len(package_ids)}")
-        print("List of package IDs:")
-        for pkg_id in package_ids:
-            print(f"- {pkg_id}")
+        # Call the organization_list action to get a list of all organizations.
+        orgs: list[str] = config.client.action.organization_list()
+        orgs_filtered = [org for org in orgs if search_string in org]
+        return orgs_filtered
     except ckanapi.errors.CKANAPIError as e:
-        print("An error occurred while fetching packages:", e)
-
-if __name__ == '__main__':
-    main()
+        print("An error occurred while fetching organizations:", e)
+        return []
