@@ -10,7 +10,7 @@ def main():
     
     try:
         # Call the package_list action to get a list of all package IDs.
-        package_ids = client.action.package_list()
+        package_ids = client.action.organization_list()
         print(f"Total packages found: {len(package_ids)}")
         print("List of package IDs:")
         for pkg_id in package_ids:
