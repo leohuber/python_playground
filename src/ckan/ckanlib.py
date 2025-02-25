@@ -2,9 +2,12 @@
 import ckanapi
 
 class Config:
-    base_url:str = None
-    def __init__(self, base_url:str):
-        self.base_url = base_url
+    def __init__(self, base_url: str):
+        self._base_url = base_url
+
+    @property
+    def base_url(self):
+        return self._base_url
 
 def main():
     # Base URL for opendata.swiss
