@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 import ckanapi
 
+class Config:
+    base_url:str = None
+    def __init__(self, base_url:str):
+        self.base_url = base_url
+
 def main():
     # Base URL for opendata.swiss
-    base_url = 'https://ckan.opendata.swiss'
+    base_url:str = 'https://ckan.opendata.swiss'
     
     #ckanapi.RemoteCKAN.base_url = 'api/3/action/'
     client = ckanapi.RemoteCKAN(base_url)
     
     try:
         # Call the package_list action to get a list of all package IDs.
-        package_ids = client.action.organization_list()
+        package_ids = client.action.package_list()
         print(f"Total packages found: {len(package_ids)}")
         print("List of package IDs:")
         for pkg_id in package_ids:
