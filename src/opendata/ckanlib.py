@@ -101,7 +101,7 @@ def get_organization_details(config: Config, organization_id: str) -> dict:
         print("An error occurred while fetching organization details:", e)
         return {}
     
-def package_search(config: Config, search_string:str = "") -> list[dict]:
+def package_search(config: Config, search_string:str = "", filter_criterias=[]) -> list[dict]:
     '''Searches for packages on CKAN based on a search string.
     Args:
         config (Config): An instance of the Config class containing CKAN API client.
@@ -111,9 +111,26 @@ def package_search(config: Config, search_string:str = "") -> list[dict]:
     '''
     try:
         # Call the package_search action to search for packages based on a search string.
-        search_results: dict = config.client.action.package_search(q=search_string)
+        search_results: dict = config.client.action.package_search(q=search_string, fq_list=filter_criterias)
         packages: list[dict] = search_results.get('results', [])
         return packages
     except ckanapi.errors.CKANAPIError as e:
         print("An error occurred while searching for packages:", e)
         return []
+    
+
+def get_package_details(config: Config, package_id: str) -> dict:
+    '''Fetches details of a specific package or dataset from CKAN based on the package ID.
+    Args:
+        config (Config): An instance of the Config class containing CKAN API client.
+        package_id (str): The ID of the package to fetch details for.
+    Returns:
+        dict: A dictionary containing details of the package.
+    '''
+    try:
+        # Call the package_show action to get details of a specific package.
+        package_details: dict = config.client.action.package_show(id=package_id)
+        return package_details
+    except ckanapi.errors.CKANAPIError as e:
+        print("An error occurred while fetching package details:", e)
+        return {}

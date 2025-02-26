@@ -1,0 +1,565 @@
+{
+    "help": "https://ckan.opendata.swiss/api/3/action/help_show?name=package_show",
+    "success": true,
+    "result": {
+        "documentation": [],
+        "maintainer": "info@bfs.admin.ch",
+        "issued": "2024-04-23T06:30:00+00:00",
+        "title_for_slug": "bevolkerung2",
+        "qualified_relations": [],
+        "private": false,
+        "maintainer_email": "auskunftsdienst@bfs.admin.ch",
+        "num_tags": 20,
+        "contact_points": [
+            {
+                "email": "auskunftsdienst@bfs.admin.ch",
+                "name": "info@bfs.admin.ch"
+            }
+        ],
+        "keywords": {
+            "fr": [
+                "population",
+                "statistiques-des-villes-suisses-2024",
+                "genre",
+                "femme",
+                "homme"
+            ],
+            "de": [
+                "mann",
+                "frau",
+                "bevolkerung",
+                "statistik-der-schweizer-stadte-2024",
+                "geschlecht"
+            ],
+            "en": [
+                "population",
+                "statistics-on-swiss-cities-and-towns-2024",
+                "gender",
+                "man",
+                "woman"
+            ],
+            "it": [
+                "uomo",
+                "genere",
+                "donna",
+                "statistica-delle-citta-svizzere-2024",
+                "popolazione"
+            ]
+        },
+        "temporals": [
+            {
+                "start_date": "1920-01-01T00:00:00",
+                "end_date": "2022-12-31T23:59:59.999999"
+            }
+        ],
+        "id": "953b83fe-442a-40e6-a043-ff6ac9fb0b54",
+        "metadata_created": "2024-04-23T06:36:24.259423",
+        "relationships_as_object": [],
+        "owner_org": "4309c328-c618-4077-bcdc-378a21ee1b46",
+        "conforms_to": [],
+        "metadata_modified": "2025-02-26T12:41:53.432151",
+        "author": null,
+        "author_email": null,
+        "relations": [
+            {
+                "url": "https://www.admin.ch/opc/de/classified-compilation/19920252/index.html",
+                "label": "legal_basis"
+            }
+        ],
+        "state": "active",
+        "version": null,
+        "spatial": "Schweiz",
+        "license_id": null,
+        "see_alsos": [],
+        "type": "dataset",
+        "resources": [
+            {
+                "byte_size": 0,
+                "cache_last_updated": null,
+                "issued": "2024-04-23T06:30:00+00:00",
+                "uri": "",
+                "package_id": "953b83fe-442a-40e6-a043-ff6ac9fb0b54",
+                "temporal_resolution": "",
+                "datastore_contains_all_records_of_source_file": false,
+                "datastore_active": false,
+                "id": "4650d49e-b63d-40de-ab71-2b75bd7c1483",
+                "size": null,
+                "rights": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "display_name": {
+                    "fr": "Population",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "title": {
+                    "fr": "Population",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "download_url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/31626820/master",
+                "state": "active",
+                "media_type": "text/csv",
+                "hash": "",
+                "description": {
+                    "fr": "Ce dataset pr\u00e9sente les chiffres annuels des Statistiques des villes suisses 2024 - Population: Population r\u00e9sidante; Population r\u00e9sidante selon le sexe et l'\u00e9tat civil; Population r\u00e9sidante selon les classes d'\u00e2ge; Population r\u00e9sidante, selon la nationalit\u00e9 et le lieu de naissance; Bilan de la population; M\u00e9nages priv\u00e9s, selon la taille du m\u00e9nage; \u00c9trangers, selon l'autorisation de r\u00e9sidence; \u00c9trangers selon la nationalit\u00e9. Les descriptions (informations g\u00e9n\u00e9rales, l\u00e9gende, explication des codes, liste variables, explications variables, source, status de la donn\u00e9e) des variables du fichier CSV sont disponibles dans l\u2019annexe.",
+                    "de": "Dieses Dataset pr\u00e4sentiert die j\u00e4hrlichen Zahlen der Statistik der Schweizer St\u00e4dte 2024 - Bev\u00f6lkerung: St\u00e4ndige Wohnbev\u00f6lkerung; St\u00e4ndige Wohnbev\u00f6lkerung nach Geschlecht und Zivilstand; St\u00e4ndige Wohnbev\u00f6lkerung nach Altersklassen; St\u00e4ndige Wohnbev\u00f6lkerung nach Staatsangeh\u00f6rigkeit und Geburtsort; Bev\u00f6lkerungsbilanz; Privathaushalte nach Haushaltsgr\u00f6sse; Ausl\u00e4nder/-innen nach Anwesenheitsbewilligung; Ausl\u00e4nder/-innen nach Staatsangeh\u00f6rigkeit. Die Beschreibungen (allgemeine Informationen, Legende, Erkl\u00e4rungen zur Codes, Liste der Variablen, Erkl\u00e4rungen zur Variablen, Quellen, Status der Daten) der Variablen in der CSV-Datei sind im Anhang ver\u00fcgbar.",
+                    "en": "",
+                    "it": ""
+                },
+                "format": "CSV",
+                "language": [
+                    "de",
+                    "fr"
+                ],
+                "mimetype_inner": null,
+                "url_type": null,
+                "name": {
+                    "fr": "Population",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "mimetype": null,
+                "cache_url": null,
+                "license": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "access_services": [],
+                "created": "2024-04-23T06:36:24.273990",
+                "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/31626820/master",
+                "documentation": [],
+                "modified": "2024-04-16T08:05:16.730000+00:00",
+                "last_modified": null,
+                "position": 0,
+                "revision_id": "0eba0462-120f-4910-a767-def285dba642",
+                "identifier": "31626820-master@bundesamt-fur-statistik-bfs",
+                "resource_type": null
+            },
+            {
+                "byte_size": 0,
+                "cache_last_updated": null,
+                "issued": "2024-04-23T06:30:00+00:00",
+                "package_id": "953b83fe-442a-40e6-a043-ff6ac9fb0b54",
+                "temporal_resolution": "",
+                "datastore_contains_all_records_of_source_file": false,
+                "datastore_active": false,
+                "id": "f5f38763-a6b6-404e-b6a1-fe4f48ac7341",
+                "size": null,
+                "rights": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "display_name": {
+                    "fr": "Population",
+                    "en": "",
+                    "de": "",
+                    "it": ""
+                },
+                "title": {
+                    "fr": "Population",
+                    "en": "",
+                    "de": "",
+                    "it": ""
+                },
+                "state": "active",
+                "media_type": "text/html",
+                "hash": "",
+                "description": {
+                    "fr": "Ce dataset pr\u00e9sente les chiffres annuels des Statistiques des villes suisses 2024 - Population: Population r\u00e9sidante; Population r\u00e9sidante selon le sexe et l'\u00e9tat civil; Population r\u00e9sidante selon les classes d'\u00e2ge; Population r\u00e9sidante, selon la nationalit\u00e9 et le lieu de naissance; Bilan de la population; M\u00e9nages priv\u00e9s, selon la taille du m\u00e9nage; \u00c9trangers, selon l'autorisation de r\u00e9sidence; \u00c9trangers selon la nationalit\u00e9. Les descriptions (informations g\u00e9n\u00e9rales, l\u00e9gende, explication des codes, liste variables, explications variables, source, status de la donn\u00e9e) des variables du fichier CSV sont disponibles dans l\u2019annexe.",
+                    "en": "",
+                    "de": "",
+                    "it": ""
+                },
+                "format": "HTML",
+                "language": [
+                    "fr"
+                ],
+                "mimetype_inner": null,
+                "url_type": null,
+                "name": {
+                    "fr": "Population",
+                    "en": "",
+                    "de": "",
+                    "it": ""
+                },
+                "mimetype": null,
+                "cache_url": null,
+                "license": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "access_services": [],
+                "created": "2024-04-23T06:36:24.273986",
+                "url": "https://www.bfs.admin.ch/asset/fr/ts-b-ssv-01-2024",
+                "documentation": [],
+                "uri": "",
+                "last_modified": null,
+                "position": 1,
+                "revision_id": "0eba0462-120f-4910-a767-def285dba642",
+                "identifier": "31626820-fr@bundesamt-fur-statistik-bfs",
+                "resource_type": null
+            },
+            {
+                "byte_size": 0,
+                "cache_last_updated": null,
+                "issued": "2024-04-23T06:30:00+00:00",
+                "package_id": "953b83fe-442a-40e6-a043-ff6ac9fb0b54",
+                "temporal_resolution": "",
+                "datastore_contains_all_records_of_source_file": false,
+                "datastore_active": false,
+                "id": "5ee3ed2b-063c-4538-81db-c300dfdd16ab",
+                "size": null,
+                "rights": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "display_name": {
+                    "fr": "",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "title": {
+                    "fr": "",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "state": "active",
+                "media_type": "text/html",
+                "hash": "",
+                "description": {
+                    "fr": "",
+                    "de": "Dieses Dataset pr\u00e4sentiert die j\u00e4hrlichen Zahlen der Statistik der Schweizer St\u00e4dte 2024 - Bev\u00f6lkerung: St\u00e4ndige Wohnbev\u00f6lkerung; St\u00e4ndige Wohnbev\u00f6lkerung nach Geschlecht und Zivilstand; St\u00e4ndige Wohnbev\u00f6lkerung nach Altersklassen; St\u00e4ndige Wohnbev\u00f6lkerung nach Staatsangeh\u00f6rigkeit und Geburtsort; Bev\u00f6lkerungsbilanz; Privathaushalte nach Haushaltsgr\u00f6sse; Ausl\u00e4nder/-innen nach Anwesenheitsbewilligung; Ausl\u00e4nder/-innen nach Staatsangeh\u00f6rigkeit. Die Beschreibungen (allgemeine Informationen, Legende, Erkl\u00e4rungen zur Codes, Liste der Variablen, Erkl\u00e4rungen zur Variablen, Quellen, Status der Daten) der Variablen in der CSV-Datei sind im Anhang ver\u00fcgbar.",
+                    "en": "",
+                    "it": ""
+                },
+                "format": "HTML",
+                "language": [
+                    "de"
+                ],
+                "mimetype_inner": null,
+                "url_type": null,
+                "name": {
+                    "fr": "",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "mimetype": null,
+                "cache_url": null,
+                "license": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "access_services": [],
+                "created": "2024-04-23T06:36:24.273982",
+                "url": "https://www.bfs.admin.ch/asset/de/ts-b-ssv-01-2024",
+                "documentation": [],
+                "uri": "",
+                "last_modified": null,
+                "position": 2,
+                "revision_id": "0eba0462-120f-4910-a767-def285dba642",
+                "identifier": "31626820-de@bundesamt-fur-statistik-bfs",
+                "resource_type": null
+            },
+            {
+                "byte_size": 0,
+                "cache_last_updated": null,
+                "issued": "2024-04-23T06:30:00+00:00",
+                "uri": "",
+                "package_id": "953b83fe-442a-40e6-a043-ff6ac9fb0b54",
+                "temporal_resolution": "",
+                "datastore_contains_all_records_of_source_file": false,
+                "datastore_active": false,
+                "id": "56c862c7-001e-4354-8416-d37834c0a6d2",
+                "size": null,
+                "rights": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "display_name": {
+                    "fr": "Population",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "title": {
+                    "fr": "Population",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "download_url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/31626820/appendix",
+                "state": "active",
+                "media_type": "application/vnd.oasis.opendocument.spreadsheet",
+                "hash": "",
+                "description": {
+                    "fr": "Ce dataset pr\u00e9sente les chiffres annuels des Statistiques des villes suisses 2024 - Population: Population r\u00e9sidante; Population r\u00e9sidante selon le sexe et l'\u00e9tat civil; Population r\u00e9sidante selon les classes d'\u00e2ge; Population r\u00e9sidante, selon la nationalit\u00e9 et le lieu de naissance; Bilan de la population; M\u00e9nages priv\u00e9s, selon la taille du m\u00e9nage; \u00c9trangers, selon l'autorisation de r\u00e9sidence; \u00c9trangers selon la nationalit\u00e9. Les descriptions (informations g\u00e9n\u00e9rales, l\u00e9gende, explication des codes, liste variables, explications variables, source, status de la donn\u00e9e) des variables du fichier CSV sont disponibles dans l\u2019annexe.",
+                    "de": "Dieses Dataset pr\u00e4sentiert die j\u00e4hrlichen Zahlen der Statistik der Schweizer St\u00e4dte 2024 - Bev\u00f6lkerung: St\u00e4ndige Wohnbev\u00f6lkerung; St\u00e4ndige Wohnbev\u00f6lkerung nach Geschlecht und Zivilstand; St\u00e4ndige Wohnbev\u00f6lkerung nach Altersklassen; St\u00e4ndige Wohnbev\u00f6lkerung nach Staatsangeh\u00f6rigkeit und Geburtsort; Bev\u00f6lkerungsbilanz; Privathaushalte nach Haushaltsgr\u00f6sse; Ausl\u00e4nder/-innen nach Anwesenheitsbewilligung; Ausl\u00e4nder/-innen nach Staatsangeh\u00f6rigkeit. Die Beschreibungen (allgemeine Informationen, Legende, Erkl\u00e4rungen zur Codes, Liste der Variablen, Erkl\u00e4rungen zur Variablen, Quellen, Status der Daten) der Variablen in der CSV-Datei sind im Anhang ver\u00fcgbar.",
+                    "en": "",
+                    "it": ""
+                },
+                "format": "ODS",
+                "language": [
+                    "de",
+                    "fr"
+                ],
+                "mimetype_inner": null,
+                "url_type": null,
+                "name": {
+                    "fr": "Population",
+                    "de": "Bev\u00f6lkerung",
+                    "en": "",
+                    "it": ""
+                },
+                "mimetype": null,
+                "cache_url": null,
+                "license": "https://opendata.swiss/terms-of-use#terms_by_ask",
+                "access_services": [],
+                "created": "2024-04-23T06:36:24.273988",
+                "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/31626820/appendix",
+                "documentation": [],
+                "modified": "2024-04-16T08:05:41.633000+00:00",
+                "last_modified": null,
+                "position": 3,
+                "revision_id": "0eba0462-120f-4910-a767-def285dba642",
+                "identifier": "31626820-appendix@bundesamt-fur-statistik-bfs",
+                "resource_type": null
+            }
+        ],
+        "num_resources": 4,
+        "description": {
+            "fr": "Ce dataset pr\u00e9sente les chiffres annuels des Statistiques des villes suisses 2024 - Population: Population r\u00e9sidante; Population r\u00e9sidante selon le sexe et l'\u00e9tat civil; Population r\u00e9sidante selon les classes d'\u00e2ge; Population r\u00e9sidante, selon la nationalit\u00e9 et le lieu de naissance; Bilan de la population; M\u00e9nages priv\u00e9s, selon la taille du m\u00e9nage; \u00c9trangers, selon l'autorisation de r\u00e9sidence; \u00c9trangers selon la nationalit\u00e9. Les descriptions (informations g\u00e9n\u00e9rales, l\u00e9gende, explication des codes, liste variables, explications variables, source, status de la donn\u00e9e) des variables du fichier CSV sont disponibles dans l\u2019annexe.",
+            "de": "Dieses Dataset pr\u00e4sentiert die j\u00e4hrlichen Zahlen der Statistik der Schweizer St\u00e4dte 2024 - Bev\u00f6lkerung: St\u00e4ndige Wohnbev\u00f6lkerung; St\u00e4ndige Wohnbev\u00f6lkerung nach Geschlecht und Zivilstand; St\u00e4ndige Wohnbev\u00f6lkerung nach Altersklassen; St\u00e4ndige Wohnbev\u00f6lkerung nach Staatsangeh\u00f6rigkeit und Geburtsort; Bev\u00f6lkerungsbilanz; Privathaushalte nach Haushaltsgr\u00f6sse; Ausl\u00e4nder/-innen nach Anwesenheitsbewilligung; Ausl\u00e4nder/-innen nach Staatsangeh\u00f6rigkeit. Die Beschreibungen (allgemeine Informationen, Legende, Erkl\u00e4rungen zur Codes, Liste der Variablen, Erkl\u00e4rungen zur Variablen, Quellen, Status der Daten) der Variablen in der CSV-Datei sind im Anhang ver\u00fcgbar.",
+            "en": "",
+            "it": ""
+        },
+        "tags": [
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "bevolkerung",
+                "id": "3a7ab753-9c79-42d8-b473-6f8cf893ace9",
+                "name": "bevolkerung"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "donna",
+                "id": "9d4351d3-0834-400e-8fc4-e52716bac76a",
+                "name": "donna"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "femme",
+                "id": "9842cdfe-34b8-4290-8a7a-0bbd16e3ba91",
+                "name": "femme"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "frau",
+                "id": "684b6b5b-69c6-4296-952f-0aabfede773f",
+                "name": "frau"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "gender",
+                "id": "6b563cab-1912-49da-ac72-eadeae8a25a8",
+                "name": "gender"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "genere",
+                "id": "6e8d7d3c-9842-438f-abe9-e00cab376f5e",
+                "name": "genere"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "genre",
+                "id": "00ad2707-874c-41cd-a7f8-4fab148f54f0",
+                "name": "genre"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "geschlecht",
+                "id": "012e4a27-3fec-4f54-9dae-f5ed425ce918",
+                "name": "geschlecht"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "homme",
+                "id": "6a0f00e5-941d-44b7-bf8c-f5bc21c5d625",
+                "name": "homme"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "man",
+                "id": "89ebc2a2-8250-4a62-af64-32a18aacabe5",
+                "name": "man"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "mann",
+                "id": "51522833-abe8-42f0-ab1b-ad5794a0eea9",
+                "name": "mann"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "popolazione",
+                "id": "fd662994-9bdf-4bc1-8811-96ed24d20d11",
+                "name": "popolazione"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "population",
+                "id": "38bcf67e-76de-4406-be63-8becf69767e0",
+                "name": "population"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "populaziun",
+                "id": "a0359466-4b53-4eef-b3d0-3c9801919363",
+                "name": "populaziun"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "statistica-delle-citta-svizzere-2024",
+                "id": "9b03ca67-6f57-4341-8c6d-1bd4c801f1cd",
+                "name": "statistica-delle-citta-svizzere-2024"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "statistics-on-swiss-cities-and-towns-2024",
+                "id": "7153edb4-0be7-4577-b099-2b9435405ff2",
+                "name": "statistics-on-swiss-cities-and-towns-2024"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "statistik-der-schweizer-stadte-2024",
+                "id": "47e06f84-4771-4d87-93ed-8b272fbce78d",
+                "name": "statistik-der-schweizer-stadte-2024"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "statistiques-des-villes-suisses-2024",
+                "id": "efe11516-acfb-4e85-9eae-725cbb8db7a7",
+                "name": "statistiques-des-villes-suisses-2024"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "uomo",
+                "id": "3741f3b7-b22b-4e4b-be59-6c7033d345a3",
+                "name": "uomo"
+            },
+            {
+                "vocabulary_id": null,
+                "state": "active",
+                "display_name": "woman",
+                "id": "4f70161c-f745-4d8e-a6c2-4205055e9070",
+                "name": "woman"
+            }
+        ],
+        "title": {
+            "fr": "Population",
+            "de": "Bev\u00f6lkerung",
+            "en": "",
+            "it": ""
+        },
+        "groups": [
+            {
+                "display_name": {
+                    "fr": "Population et soci\u00e9t\u00e9",
+                    "de": "Bev\u00f6lkerung und Gesellschaft",
+                    "en": "Population and society",
+                    "it": "Popolazione e societ\u00e0"
+                },
+                "description": {
+                    "fr": "",
+                    "de": "",
+                    "en": "",
+                    "it": ""
+                },
+                "title": {
+                    "fr": "Population et soci\u00e9t\u00e9",
+                    "de": "Bev\u00f6lkerung und Gesellschaft",
+                    "en": "Population and society",
+                    "it": "Popolazione e societ\u00e0"
+                },
+                "image_display_url": "",
+                "id": "d569c3de-4b8d-4de0-8f0e-9ac4c17f9003",
+                "name": "soci"
+            }
+        ],
+        "creator_user_id": "af084126-f711-4016-a585-70354e997796",
+        "display_name": {
+            "fr": "Population",
+            "de": "Bev\u00f6lkerung",
+            "en": "",
+            "it": ""
+        },
+        "relationships_as_subject": [],
+        "name": "bevolkerung2",
+        "publisher": {
+            "url": "https://www.bfs.admin.ch/",
+            "name": "BFS/OFS"
+        },
+        "isopen": false,
+        "language": [
+            "de",
+            "fr"
+        ],
+        "accrual_periodicity": "http://publications.europa.eu/resource/authority/frequency/ANNUAL",
+        "license_title": null,
+        "url": "https://www.bfs.admin.ch/asset/de/ts-b-ssv-01-2024",
+        "extras": [
+            {
+                "value": "31626818@bundesamt-fur-statistik-bfs",
+                "key": "guid"
+            },
+            {
+                "value": "https://ckan.opendata.swiss/perma/31626818@bundesamt-fur-statistik-bfs",
+                "key": "uri"
+            }
+        ],
+        "organization": {
+            "display_name": {
+                "fr": "Office f\u00e9d\u00e9ral de la statistique OFS",
+                "de": "Bundesamt f\u00fcr Statistik BFS",
+                "en": "Federal Statistical Office FSO",
+                "it": "Ufficio federale di statistica UST"
+            },
+            "description": {
+                "fr": "L'OFS est le centre de comp\u00e9tence de la statistique publique suisse. Il produit des informations statistiques sur la population, l'\u00e9conomie, la soci\u00e9t\u00e9, la formation et la recherche, le territoire et l'environnement. Ces informations servent \u00e0 la formation de l\u2019opinion publique. Elles sont un outil de planification et de gouvernance dans tous les domaines de l\u2019action politique et contribuent au bon fonctionnement de notre \u00c9tat moderne et d\u00e9mocratique.",
+                "de": "Das BFS ist das nationale Kompetenzzentrum der \u00f6ffentlichen Statistik der Schweiz. Es produziert und publiziert statistische Informationen \u00fcber den Stand und die Entwicklung von Bev\u00f6lkerung, Wirtschaft, Gesellschaft, Bildung, Forschung, Raum und Umwelt. Diese Informationen dienen der Meinungsbildung in der Bev\u00f6lkerung sowie der Planung und Steuerung von zentralen Politikbereichen. Sie leisten einen wichtigen Beitrag f\u00fcr einen modernen, demokratischen Staat.",
+                "en": "The FSO is Switzerland's national competence centre for official statistics. It produces and publishes statistical information on the status and development of the population, economy, society, education, research, territory and the environment. This information is used for opinion building among the population and for the planning and management of key policy areas. They make an important contribution to a modern, democratic state.",
+                "it": "L\u2019UST \u00e8 il centro di competenza nazionale per la statistica pubblica della Svizzera. Produce e pubblica informazioni statistiche sullo stato e sull'evoluzione della popolazione, dell'economia, della societ\u00e0, della formazione, della ricerca, del territorio e dell'ambiente. Queste informazioni servono alla formazione dell'opinione pubblica nonch\u00e9 alla pianificazione e alla gestione in ambiti politici di centrale importanza. Forniscono un importante contributo per uno Stato moderno e democratico."
+            },
+            "image_display_url": "https://ckan.opendata.swiss/uploads/group/BFS_08_web.jpg",
+            "url": "https://www.bfs.admin.ch",
+            "package_count": 3001,
+            "created": "2015-11-30T11:50:01.742198",
+            "name": "bundesamt-fur-statistik-bfs",
+            "is_organization": true,
+            "state": "active",
+            "image_url": "https://ckan.opendata.swiss/uploads/group/BFS_08_web.jpg",
+            "revision_id": "a9c07792-c20d-406e-bae8-01efb95e3cce",
+            "groups": [],
+            "type": "organization",
+            "title": {
+                "fr": "Office f\u00e9d\u00e9ral de la statistique OFS",
+                "de": "Bundesamt f\u00fcr Statistik BFS",
+                "en": "Federal Statistical Office FSO",
+                "it": "Ufficio federale di statistica UST"
+            },
+            "political_level": "confederation",
+            "num_followers": 0,
+            "id": "4309c328-c618-4077-bcdc-378a21ee1b46",
+            "tags": [],
+            "approval_status": "approved"
+        },
+        "revision_id": "f24cd24e-a7ca-4264-affc-8e8c604b2c79",
+        "identifier": "31626818@bundesamt-fur-statistik-bfs"
+    }
+}
