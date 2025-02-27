@@ -20,5 +20,6 @@ dependencies = [
     "matplotlib>=3.10",
     "line-profiler>=4.2.0",
     # memory_profiler is not maintaned anymore!!!
+    # https://github.com/pythonprofilers/memory_profiler
     "memory_profiler>=0.61.0"
 ]
