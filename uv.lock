@@ -1218,6 +1218,18 @@ wheels = [
 ]
 
 [[package]]
+name = "memory-profiler"
+version = "0.61.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "psutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b2/88/e1907e1ca3488f2d9507ca8b0ae1add7b1cd5d3ca2bc8e5b329382ea2c7b/memory_profiler-0.61.0.tar.gz", hash = "sha256:4e5b73d7864a1d1292fb76a03e82a3e78ef934d06828a698d9dada76da2067b0", size = 35935 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/26/aaca612a0634ceede20682e692a6c55e35a94c21ba36b807cc40fe910ae1/memory_profiler-0.61.0-py3-none-any.whl", hash = "sha256:400348e61031e3942ad4d4109d18753b2fb08c2f6fb8290671c5513a34182d84", size = 31803 },
+]
+
+[[package]]
 name = "multidict"
 version = "6.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1758,6 +1770,7 @@ dependencies = [
     { name = "line-profiler" },
     { name = "llama-index" },
     { name = "matplotlib" },
+    { name = "memory-profiler" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "pedalboard" },
@@ -1776,6 +1789,7 @@ requires-dist = [
     { name = "line-profiler", specifier = ">=4.2.0" },
     { name = "llama-index", specifier = ">=0.12.11" },
     { name = "matplotlib", specifier = ">=3.10" },
+    { name = "memory-profiler", specifier = ">=0.61.0" },
     { name = "numpy", specifier = ">=2.2.0" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pedalboard", specifier = ">=0.9.16" },

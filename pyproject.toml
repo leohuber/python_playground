@@ -18,5 +18,7 @@ dependencies = [
     "langchain>=0.3.19",
     "langchain-community>=0.3.17",
     "matplotlib>=3.10",
-    "line-profiler>=4.2.0"
+    "line-profiler>=4.2.0",
+    # memory_profiler is not maintaned anymore!!!
+    "memory_profiler>=0.61.0"
 ]
