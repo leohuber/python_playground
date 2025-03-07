@@ -38,7 +38,7 @@ line-length = 150
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = []
+ignore = ["T201", "D"]
 
 [tool.mypy]
 ignore_missing_imports = true
