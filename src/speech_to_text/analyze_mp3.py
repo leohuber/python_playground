@@ -1,8 +1,9 @@
-from pedalboard.io import AudioFile
 import os
 
+from pedalboard.io import AudioFile
+
 # Path to the MP3 file
-file_path = os.path.join(os.path.dirname(__file__), '../../.tmp/output.mp3')
+file_path = os.path.join(os.path.dirname(__file__), "../../.tmp/output.mp3")
 
 # Check if the file exists
 if not os.path.isfile(file_path):
