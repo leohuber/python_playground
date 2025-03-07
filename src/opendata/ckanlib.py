@@ -26,24 +26,26 @@ def get_organisations(config: Config, search_string: str = "") -> list[str]:
         return orgs_filtered
 
 
-def get_groups(config: Config, search_string: str = "") -> list[str]:
+def get_groups(config: Config, search_string: str = "") -> list[str] | None:
     try:
         # Call the group_list action to get a list of all groups.
         groups: list[str] = config.client.action.group_list()
         groups_filtered = [group for group in groups if search_string in group]
     except ckanapi.errors.CKANAPIError as e:
         print("An error occurred while fetching groups:", e)
+        return None
     else:
         return groups_filtered
 
 
-def get_tags(config: Config, search_string: str = "") -> list[str]:
+def get_tags(config: Config, search_string: str = "") -> list[str] | None:
     try:
         # Call the tag_list action to get a list of all tags.
         tags: list[str] = config.client.action.tag_list()
         tags_filtered = [tag for tag in tags if search_string in tag]
     except ckanapi.errors.CKANAPIError as e:
         print("An error occurred while fetching tags:", e)
+        return None
     else:
         return tags_filtered
 
