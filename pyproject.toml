@@ -9,6 +9,7 @@ dependencies = [
     "textual-plotext>=0.2.1",
     "ckanapi>=4.8",
     "ipykernel>=6.29.5",
+    "ipython>=9.0.1",
     "numpy>=2.2.0",
     "scipy>=1.15.1",
     "pandas>=2.2.3",
