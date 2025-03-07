@@ -1,23 +1,23 @@
-#from pedalboard import Pedalboard, Chorus, Compressor, Gain, Reverb, Phaser
-from pedalboard.io import AudioStream, AudioFile
-import threading
 import os
-import sounddevice as sd
-import sys
 import select
+import sys
+import threading
 import time
 
-mp3_quality = 'V6' # V0 (highest quality) to V9 (lowest quality)
+import sounddevice as sd
+from pedalboard.io import AudioFile, AudioStream
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
+mp3_quality = "V6" # V0 (highest quality) to V9 (lowest quality)
+
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
 
 print("Available input devices:")
 device_list = []
 devices = sd.query_devices()
 for dev in devices:
-    if dev['max_input_channels'] > 0:
-        device_list.append(dev['name'])
+    if dev["max_input_channels"] > 0:
+        device_list.append(dev["name"])
         print(f"Device {len(device_list)-1}: {dev['name']}")
 
 while True:
@@ -42,11 +42,11 @@ with AudioStream(
     "w",
     stream.sample_rate,
     stream.num_input_channels,
-    quality=mp3_quality
+    quality=mp3_quality,
 ) as audio_file:
-    
+
     # Set up the pedalboard for processing
-    '''
+    """
     stream.plugins = Pedalboard([
         Compressor(threshold_db=-50, ratio=25),
         Gain(gain_db=30),
@@ -54,7 +54,7 @@ with AudioStream(
         Phaser(),
         Reverb(room_size=0.25),
     ])
-    '''
+    """
 
     # Use a separate thread to listen for the user pressing enter.
     stop_event = threading.Event()
@@ -65,7 +65,7 @@ with AudioStream(
             elapsed = int(time.time() - start_time)
             minutes = elapsed // 60
             seconds = elapsed % 60
-            print(f"\rRecording ({minutes}m {seconds}s) ... Press enter to stop streaming and writing the file ...", end='', flush=True)
+            print(f"\rRecording ({minutes}m {seconds}s) ... Press enter to stop streaming and writing the file ...", end="", flush=True)
             if sys.stdin in select.select([sys.stdin], [], [], 1)[0]:
                 sys.stdin.readline()
                 break
