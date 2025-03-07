@@ -1,16 +1,16 @@
-import os
+from pathlib import Path
 
 from pedalboard.io import AudioFile
 
 # Path to the MP3 file
-file_path = os.path.join(os.path.dirname(__file__), "../../.tmp/output.mp3")
+file_path = (Path(__file__).parent / "../../.tmp/output.mp3").resolve()
 
 # Check if the file exists
-if not os.path.isfile(file_path):
-    raise FileNotFoundError(f"The file {file_path} does not exist.")
+if not file_path.is_file():
+    raise FileNotFoundError(file_path)
 
 # Open the MP3 file and analyze it
-with AudioFile(file_path) as f:
+with AudioFile(str(file_path)) as f:
     print(f"Sample rate: {f.samplerate}")
     print(f"Number of channels: {f.num_channels}")
     print(f"Duration: {f.duration} seconds")
