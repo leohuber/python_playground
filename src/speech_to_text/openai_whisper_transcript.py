@@ -13,7 +13,7 @@ openapi_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI()
 
 project_root = Path(__file__).resolve().parents[1]
-WAVE_FILENAME = project_root + "/.tmp/output.mp3"
+WAVE_FILENAME = project_root / ".tmp" / "output.mp3"
 
 audio_path = Path(WAVE_FILENAME)
 with audio_path.open("rb") as audio_file:

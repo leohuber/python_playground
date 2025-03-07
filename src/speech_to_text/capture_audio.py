@@ -10,7 +10,7 @@ from pedalboard.io import AudioFile, AudioStream  # type: ignore[attr-defined]
 mp3_quality = "V6"  # V0 (highest quality) to V9 (lowest quality)
 
 project_root = (Path(__file__).resolve().parent / "../../").resolve()
-MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
+MP3_OUTPUT_FILENAME = project_root / ".tmp" / "output.mp3"
 
 print("Available input devices:")
 device_list = []
