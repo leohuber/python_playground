@@ -37,7 +37,7 @@ dev-dependencies = [
 line-length = 150
 
 [tool.ruff.lint]
-select = []
+select = ["ALL"]
 ignore = []
 
 [tool.mypy]
