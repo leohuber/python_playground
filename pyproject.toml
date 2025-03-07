@@ -1,7 +1,7 @@
 [project]
 name = "python-playground"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Python Playground to try new frameworks and test language features"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -23,3 +23,16 @@ dependencies = [
     # https://github.com/pythonprofilers/memory_profiler
     "memory_profiler>=0.61.0"
 ]
+
+[tool.uv]
+managed = true
+dev-dependencies = [
+    "ruff>=0.9.9",
+    "mypy>=1.15.0"
+]
+
+[tool.ruff]
+line-length = 150
+
+[tool.mypy]
+ignore_missing_imports = true
