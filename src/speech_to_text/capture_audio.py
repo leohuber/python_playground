@@ -1,15 +1,15 @@
-import os
 import select
 import sys
 import threading
 import time
+from pathlib import Path
 
 import sounddevice as sd
 from pedalboard.io import AudioFile, AudioStream
 
 mp3_quality = "V6" # V0 (highest quality) to V9 (lowest quality)
 
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+project_root = (Path(__file__).resolve().parent / "../../").resolve()
 MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
 
 print("Available input devices:")
@@ -58,7 +58,7 @@ with AudioStream(
 
     # Use a separate thread to listen for the user pressing enter.
     stop_event = threading.Event()
-    def wait_for_input():
+    def wait_for_input() -> None:
         start_time = time.time()
         print("Press enter to stop streaming and writing the file ...")
         while True:
