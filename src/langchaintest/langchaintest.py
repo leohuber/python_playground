@@ -1,9 +1,10 @@
 import os
+
 import requests
 from dotenv import load_dotenv
-from langchain.llms import OpenAI
-from langchain.docstore.document import Document
 from langchain.chains.summarize import load_summarize_chain
+from langchain.docstore.document import Document
+from langchain.llms import OpenAI
 
 # Load environment variables from .env file
 load_dotenv()
@@ -24,16 +25,16 @@ def fetch_url_content(url: str) -> str:
 def main():
     # Fetch webpage content
     content = fetch_url_content(URL)
-    
+
     # Wrap the fetched content in a LangChain Document
     document = Document(page_content=content)
-    
+
     # Initialize the OpenAI LLM with LangChain
     llm = OpenAI(openai_api_key=OPENAI_API_KEY, temperature=0)
-    
+
     # Load a summarization chain
     chain = load_summarize_chain(llm, chain_type="map_reduce")
-    
+
     # Generate the summary from the document
     summary = chain.run([document])
     print("Summary:")
