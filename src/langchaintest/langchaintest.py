@@ -9,20 +9,28 @@ from langchain.llms import OpenAI
 # Load environment variables from .env file
 load_dotenv()
 
+
+class OpenaiKeyNotFoundError(ValueError):
+    def __init__(self) -> None:
+        super().__init__("OpenAI API key not found. Please set the 'OPENAI_API_KEY' environment variable.")
+
+
 # Make sure to set your OpenAI API key in the environment variable "OPENAI_API_KEY"
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if OPENAI_API_KEY is None:
-    raise ValueError("Please set the 'OPENAI_API_KEY' environment variable.")
+    raise OpenaiKeyNotFoundError
 
 # URL to fetch the content from
 URL = "https://ethz.ch/de.html"
 
+
 def fetch_url_content(url: str) -> str:
-    response = requests.get(url)
+    response = requests.get(url, timeout=10)
     response.raise_for_status()
     return response.text
 
-def main():
+
+def main() -> None:
     # Fetch webpage content
     content = fetch_url_content(URL)
 
@@ -39,6 +47,7 @@ def main():
     summary = chain.run([document])
     print("Summary:")
     print(summary)
+
 
 if __name__ == "__main__":
     main()
