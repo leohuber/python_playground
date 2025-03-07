@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from pedalboard.io import AudioFile
+from pedalboard.io import AudioFile  # type: ignore[attr-defined]
 
 # Path to the MP3 file
 file_path = (Path(__file__).parent / "../../.tmp/output.mp3").resolve()

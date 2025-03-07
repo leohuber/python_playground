@@ -5,9 +5,9 @@ import time
 from pathlib import Path
 
 import sounddevice as sd
-from pedalboard.io import AudioFile, AudioStream
+from pedalboard.io import AudioFile, AudioStream  # type: ignore[attr-defined]
 
-mp3_quality = "V6" # V0 (highest quality) to V9 (lowest quality)
+mp3_quality = "V6"  # V0 (highest quality) to V9 (lowest quality)
 
 project_root = (Path(__file__).resolve().parent / "../../").resolve()
 MP3_OUTPUT_FILENAME = project_root + "/.tmp/output.mp3"
@@ -18,7 +18,7 @@ devices = sd.query_devices()
 for dev in devices:
     if dev["max_input_channels"] > 0:
         device_list.append(dev["name"])
-        print(f"Device {len(device_list)-1}: {dev['name']}")
+        print(f"Device {len(device_list) - 1}: {dev['name']}")
 
 while True:
     try:
@@ -35,16 +35,18 @@ while True:
 # Open up an audio stream:
 # Open an audio stream from the microphone, process the audio with a pedalboard,
 # and write the processed audio to a file.
-with AudioStream(
-    input_device_name=input_device_name,  # Guitar interface
-) as stream, AudioFile(
-    MP3_OUTPUT_FILENAME,
-    "w",
-    stream.sample_rate,
-    stream.num_input_channels,
-    quality=mp3_quality,
-) as audio_file:
-
+with (
+    AudioStream(
+        input_device_name=input_device_name,  # Guitar interface
+    ) as stream,
+    AudioFile(
+        MP3_OUTPUT_FILENAME,
+        "w",
+        stream.sample_rate,
+        stream.num_input_channels,
+        quality=mp3_quality,
+    ) as audio_file,
+):
     # Set up the pedalboard for processing
     """
     stream.plugins = Pedalboard([
@@ -58,6 +60,7 @@ with AudioStream(
 
     # Use a separate thread to listen for the user pressing enter.
     stop_event = threading.Event()
+
     def wait_for_input() -> None:
         start_time = time.time()
         print("Press enter to stop streaming and writing the file ...")
@@ -71,6 +74,7 @@ with AudioStream(
                 break
         stop_event.set()
         stop_event.set()
+
     threading.Thread(target=wait_for_input, daemon=True).start()
 
     # Continuously read audio blocks and write them to the file until input is received.

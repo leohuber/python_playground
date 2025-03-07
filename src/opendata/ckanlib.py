@@ -15,13 +15,14 @@ class Config:
         return self._client
 
 
-def get_organisations(config: Config, search_string: str = "") -> list[str]:
+def get_organisations(config: Config, search_string: str = "") -> list[str] | None:
     try:
         # Call the organization_list action to get a list of all organizations.
         orgs: list[str] = config.client.action.organization_list()
         orgs_filtered = [org for org in orgs if search_string in org]
     except ckanapi.errors.CKANAPIError as e:
         print("An error occurred while fetching organizations:", e)
+        return None
     else:
         return orgs_filtered
 
@@ -50,32 +51,35 @@ def get_tags(config: Config, search_string: str = "") -> list[str] | None:
         return tags_filtered
 
 
-def get_organization_details(config: Config, organization_id: str) -> dict:
+def get_organization_details(config: Config, organization_id: str) -> dict | None:
     try:
         # Call the organization_show action to get details of a specific organization.
         org_details: dict = config.client.action.organization_show(id=organization_id)
     except ckanapi.errors.CKANAPIError as e:
         print("An error occurred while fetching organization details:", e)
+        return None
     else:
         return org_details
 
 
-def package_search(config: Config, search_string: str = "", filter_criterias: list[str] | None = None) -> list[dict]:
+def package_search(config: Config, search_string: str = "", filter_criterias: list[str] | None = None) -> list[dict] | None:
     try:
         # Call the package_search action to search for packages based on a search string.
         search_results: dict = config.client.action.package_search(q=search_string, fq_list=filter_criterias)
         packages: list[dict] = search_results.get("results", [])
     except ckanapi.errors.CKANAPIError as e:
         print("An error occurred while searching for packages:", e)
+        return None
     else:
         return packages
 
 
-def get_package_details(config: Config, package_id: str) -> dict:
+def get_package_details(config: Config, package_id: str) -> dict | None:
     try:
         # Call the package_show action to get details of a specific package.
         package_details: dict = config.client.action.package_show(id=package_id)
     except ckanapi.errors.CKANAPIError as e:
         print("An error occurred while fetching package details:", e)
+        return None
     else:
         return package_details
