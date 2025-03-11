@@ -1,0 +1,25 @@
+# {{recipe.title}}
+
+### Beschreibung
+
+Portionen: {{recipe.servings}}
+
+{{recipe.description}}
+
+### Zutaten
+
+| Zutat | Menge | Einheit |
+|------------|----------|------|
+{% for ingredient in recipe.ingredients -%}
+| {{ ingredient.name }} | {{ ingredient.amount }} | {{ ingredient.unit }} |
+{% endfor %}
+
+## Anleitung
+
+{% for instruction in recipe.instructions %}
+* {{ instruction }}
+{% endfor %}
+
+### Anmerkungen
+
+{{recipe.notes}}
